@@ -5,12 +5,13 @@
 
         <el-header id="header">
           <a class="logo-name"
-             href="./index">arwen</a>
+             href="./entry">ARWEN</a>
         </el-header>
         <el-container>
 
           <div class="el-aside">
             <el-menu :default-active="menus[0].url"
+                     active-text-color="#41b883"
                      :router="true"
                      class="el-menu-vertical-demo"
                      :collapse="isCollapse">
@@ -47,22 +48,24 @@
 </template>
 
 <script>
+const menus = [ // menu板块
+  {
+    icon: 'el-icon-star-on',
+    name: '首页',
+    url: '/entry'
+  },
+  {
+    icon: 'el-icon-circle-close',
+    name: '404',
+    url: '/arwenfang'
+  }
+];
+
 export default {
   data () {
     return {
       isCollapse: false,
-      menus: [
-        {
-          icon: 'el-icon-star-on',
-          name: '首页',
-          url: '/index'
-        },
-        {
-          icon: 'el-icon-circle-close',
-          name: '404',
-          url: '/arwenfang'
-        }
-      ]
+      menus: menus
     }
   },
   created () { },
@@ -98,7 +101,7 @@ export default {
   .logo-name {
     font-size: 1.5em;
     line-height: 40px;
-    color: #2c3e50;
+    color: #41b883;
     font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
     font-weight: 500;
   }

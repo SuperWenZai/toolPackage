@@ -19,7 +19,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: 'coco'
+        content: pkg.description
       }
     ],
     link: [{
@@ -30,6 +30,10 @@ module.exports = {
     script: [
       //{src:"https://cdn.bootcss.com/jquery/3.3.1/core.js"} //引入第三方JS
     ]
+  },
+
+  transition: {
+    name: 'fade'
   },
 
   /*
